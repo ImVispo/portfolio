@@ -1,20 +1,23 @@
-import react from "react";
+import react, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router";
+import useSound from "use-sound";
 import { GithubIcon, LinkedInIcon } from "./Icons";
-
-const defaultHover = "hover:cursor-pointer duration-300";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const [playClick] = useSound("/sounds/click.mp3");
+  useEffect(() => {
+    playClick();
+  }, [pathname]);
 
   const pages = [
     {
-      name: "about",
+      name: "About",
       path: "/",
     },
     {
-      name: "projects",
+      name: "Work",
       path: "/projects",
     },
   ];
@@ -48,19 +51,13 @@ type PageProps = {
 const Page = (props: PageProps) => {
   const { name, path, active, navigate } = props;
   return (
-    <div
-      className={`block 
-    ${active ? "border-r -mr-px" : null}`}
+    <p
+      className={`block pl-8 py-2 hover:text-white hover:cursor-pointer hover:border-r hover:-mr-px hover:border-white/20 font-medium
+  ${active ? "text-white border-r -mr-px" : "text-gray-300 font-normal"}`}
       onClick={() => navigate(path)}
     >
-      <p
-        className={`pl-8 pt-3 font-mono underline
-      hover:text-white ${defaultHover}
-      ${active ? "text-white" : "text-gray-300"}`}
-      >
-        /{name}
-      </p>
-    </div>
+      {name}
+    </p>
   );
 };
 
@@ -69,12 +66,12 @@ const Footer = () => (
   <div className="pb-10 px-20 flex justify-between">
     <div>
       <GithubIcon
-        className={`fill-gray-300 hover:fill-white ${defaultHover}`}
+        className={`fill-gray-300 hover:fill-white hover:cursor-pointer duration-300`}
       />
     </div>
     <div>
       <LinkedInIcon
-        className={`fill-gray-300 hover:fill-white ${defaultHover}`}
+        className={`fill-gray-300 hover:fill-white hover:cursor-pointer duration-300`}
       />
     </div>
   </div>
