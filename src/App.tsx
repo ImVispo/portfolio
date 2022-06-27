@@ -2,7 +2,7 @@ import React from "react";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-slate-700">
       <header className="App-header">
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
