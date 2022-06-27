@@ -39,21 +39,6 @@ const Navbar = () => {
   );
 };
 
-const Footer = () => (
-  //   console.log("hi");
-  <div className="pb-10 px-20 flex justify-between">
-    <div>
-      <GithubIcon
-        className={`fill-gray-300 hover:fill-white ${defaultHover}`}
-      />
-    </div>
-    <div>
-      <LinkedInIcon
-        className={`fill-gray-300 hover:fill-white ${defaultHover}`}
-      />
-    </div>
-  </div>
-);
 type PageProps = {
   name: string;
   path: string;
@@ -78,5 +63,21 @@ const Page = (props: PageProps) => {
     </div>
   );
 };
+
+const Footer = () => (
+  //   console.log("hi");
+  <div className="pb-10 px-20 flex justify-between">
+    <div>
+      <GithubIcon
+        className={`fill-gray-300 hover:fill-white ${defaultHover}`}
+      />
+    </div>
+    <div>
+      <LinkedInIcon
+        className={`fill-gray-300 hover:fill-white ${defaultHover}`}
+      />
+    </div>
+  </div>
+);
 
 export default Navbar;
