@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.tsx", "./src/**/*.ts"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dark: "#141519",
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+    // ...
+  ],
 };
