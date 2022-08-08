@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full p-5 border-b border-white/10 flex justify-between">
+      <div className="w-full p-5 border-b border-white/10 flex justify-between">
         <TerminalIcon className={`stroke-[#D9E6FF] w-6 ${iconClassName}`} />
         {/* <div className="pt-10">
           {pages.map((page) => (
