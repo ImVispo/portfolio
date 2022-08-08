@@ -1,4 +1,5 @@
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
 import {
   SiteIcon,
   TwitterIcon,
@@ -14,8 +15,13 @@ import {
   DiscordIcon,
   TailwindIcon,
   PostgresIcon,
+  CSharpIcon,
+  CIcon,
+  UnityIcon,
+  ExternalLink,
 } from "../components/Icons";
 import Technology from "../components/Technology";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const Home = () => {
   console.log("Home");
@@ -53,15 +59,122 @@ const Projects = () => {
   const projectsBig = [
     {
       name: "Vision",
-      description: "A platform for viewing NFT collection rarity rankings",
-      image: "/images/vision-rarity-example.PNG",
-      logo: "https://avatars.githubusercontent.com/u/45183411?v=4",
+      description: "A platform for viewing NFT collection rarity rankings.",
+      isPrivate: true,
+      link: "https://rarity.visiontools.io/",
+      images: [
+        "/images/vision-1.PNG",
+        "/images/vision-2.PNG",
+        "/images/vision-3.PNG",
+      ],
+      logo: "/images/vision-logo.PNG",
+      technologies: [
+        {
+          color: "bg-[#007acc]",
+          icon: <TypescriptIcon />,
+        },
+        {
+          color: "bg-[#282C34]",
+          icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#000000]",
+          icon: <NextIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#0277bd]",
+          icon: <PostgresIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Flow",
+      description:
+        "Chrome extension and web dashboard that aids in buying sneakers and streetwear.",
+      isPrivate: true,
+      link: "https://gizmo.solutions/",
+      images: [
+        "/images/flow-1.PNG",
+        "/images/flow-2.PNG",
+        "/images/flow-3.PNG",
+      ],
+      logo: "/images/flow-logo.jpg",
+      technologies: [
+        {
+          color: "bg-[#007acc]",
+          icon: <TypescriptIcon />,
+        },
+        {
+          color: "bg-[#282C34]",
+          icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#023430]",
+          icon: <MongoIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Totemfall",
+      description:
+        "Top down survival game to try and survive against waves of enemies.",
+      link: "https://github.com/ImVispo/Totemfall",
+      images: ["/images/totemfall-1.PNG"],
+      technologies: [
+        {
+          icon: <CSharpIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#fff]",
+          icon: <UnityIcon className="w-6 md:w-8 mr-1" />,
+        },
+      ],
+    },
+    {
+      name: "Portfolio Website",
+      description:
+        "This website you're looking at! My personal portfolio showcasing my projects and more about me.",
+      link: "https://github.com/ImVispo/portfolio",
+      technologies: [
+        {
+          color: "bg-[#007acc]",
+          icon: <TypescriptIcon />,
+        },
+        {
+          color: "bg-[#282C34]",
+          icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Semaphore and Message Passing",
+      description:
+        "To become familiar with concurrent processing in Unix/Linux using shared memory and with semaphores in POSIX-based operating systems.",
+      link: "https://github.com/ImVispo/Semaphores-and-Message-Passing",
+      technologies: [
+        {
+          icon: <CIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Puffer",
+      description:
+        "Automated Twitch clip compiler. Running on YouTube channels for games such as League of Legends, Valorant and more.",
+      link: "https://github.com/lukebradaric/puffer-twitch",
+      logo: "/images/puffer-logo.PNG",
+      technologies: [
+        {
+          color: "bg-[#F7DF1E]",
+          icon: <JavascriptIcon className="w-6 md:w-8" />,
+        },
+      ],
     },
   ];
   return (
     <div className="px-5 md:px-10 py-5 bg-[#0C0C10]">
       <p className="text-2xl md:text-3xl font-semibold">Projects</p>
-      <div className="mt-5">
+      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {projectsBig.map((project, i) => (
           <ProjectCardBig key={i} {...project} />
         ))}
@@ -73,27 +186,64 @@ const Projects = () => {
 interface ProjectBigProps {
   name: string;
   description: string;
-  image: string;
-  logo: string;
+  isPrivate?: boolean;
+  link: string;
+  images?: string[];
+  logo?: string;
+  technologies?: TechnologyProps[];
+}
+interface TechnologyProps {
+  color?: string;
+  icon: JSX.Element;
 }
 const ProjectCardBig = (props: ProjectBigProps) => (
-  <div className="rounded-md bg-[#667085]/[.02] p-3">
+  <div className="rounded-md bg-[#667085]/[.05] p-3 md:p-4">
     {/* Logo, Name, Description */}
     <div className="flex items-center border-b border-[#667085]/[.1] pb-3">
-      <img className="w-[60px] rounded-md" src={props.logo}></img>
-      <div className="flex flex-col ml-3 justify-center">
+      {props.logo ? (
+        <img className="w-[60px] rounded-md mr-3" src={props.logo}></img>
+      ) : null}
+      <div className="flex flex-col justify-center">
         <p className="text-xl font-bold">{props.name}</p>
         <p className="text-sm text-white/50">{props.description}</p>
       </div>
     </div>
     {/* Links */}
-    <div className="my-3">
-      <p className="text-sm text-blue-400 underline hover:cursor-pointer">
-        View live site
-      </p>
+    <div className="mt-3 flex space-x-2">
+      {props.isPrivate ? (
+        <div className="flex">
+          <LockIcon className="w-4 stroke-white/50 mr-1" />
+          <p className="text-sm text-white/50">Private Project</p>
+        </div>
+      ) : null}
+      <div
+        className="flex hover:cursor-pointer"
+        onClick={() => window.open(props.link)}
+      >
+        <p className="text-sm text-blue-400 underline mr-1">
+          View Project {!props.isPrivate ? "on Github" : null}
+        </p>
+        <ExternalLink className="w-4 stroke-blue-400" />
+      </div>
     </div>
-    {/* Image */}
-    <img className="rounded-md" src={props.image}></img>
+    {/* Technologies */}
+    <div className="flex space-x-2 mt-3">
+      {props.technologies?.map((technology, i) => (
+        <Technology
+          key={i}
+          color={technology.color || ""}
+          icon={technology.icon}
+        />
+      ))}
+    </div>
+    {/* Images */}
+    <Carousel showThumbs={false} className="mt-3">
+      {props.images?.map((image, i) => (
+        <div key={i}>
+          <img className="rounded-md" src={image}></img>
+        </div>
+      ))}
+    </Carousel>
   </div>
 );
 

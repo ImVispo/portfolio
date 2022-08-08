@@ -9,7 +9,7 @@ const Technology = (props: TechnologyProps) => {
   return (
     <div>
       <div
-        className={`w-[40px] h-[40px] flex flex-col place-items-center justify-center rounded-lg ${color}`}
+        className={`w-[35px] h-[35px] md:w-[40px] md:h-[40px] flex flex-col place-items-center justify-center rounded-md ${color}`}
       >
         {icon}
       </div>
