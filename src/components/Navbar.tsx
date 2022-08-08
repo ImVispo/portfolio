@@ -1,8 +1,9 @@
 import react, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router";
 import useSound from "use-sound";
-import { GithubIcon, LinkedInIcon } from "./Icons";
+import { TerminalIcon, GithubIcon, LinkedInIcon } from "./Icons";
 
+const iconClassName = `hover:cursor-pointer duration-300`;
 const Navbar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -24,8 +25,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-60 h-screen border-r border-white/10 flex flex-col justify-between">
-        <div className="pt-10">
+      <div className="fixed w-full p-5 border-b border-white/10 flex justify-between">
+        <TerminalIcon className={`stroke-[#D9E6FF] w-6 ${iconClassName}`} />
+        {/* <div className="pt-10">
           {pages.map((page) => (
             <Page
               name={page.name}
@@ -34,9 +36,8 @@ const Navbar = () => {
               navigate={navigate}
             />
           ))}
-        </div>
-        {/* <UserInfo /> */}
-        <Footer />
+        </div> */}
+        <MyLinks className="m-auto" />
       </div>
     </>
   );
@@ -61,19 +62,12 @@ const Page = (props: PageProps) => {
   );
 };
 
-const Footer = () => (
-  //   console.log("hi");
-  <div className="pb-10 px-20 flex justify-between">
-    <div>
-      <GithubIcon
-        className={`fill-gray-300 hover:fill-white hover:cursor-pointer duration-300`}
-      />
-    </div>
-    <div>
-      <LinkedInIcon
-        className={`fill-gray-300 hover:fill-white hover:cursor-pointer duration-300`}
-      />
-    </div>
+const MyLinks = ({ className }: { className: string }) => (
+  <div className="flex space-x-5">
+    <GithubIcon className={`fill-gray-300 hover:fill-white ${iconClassName}`} />
+    <LinkedInIcon
+      className={`fill-gray-300 hover:fill-white ${iconClassName}`}
+    />
   </div>
 );
 

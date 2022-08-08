@@ -135,10 +135,6 @@ const Projects = () => {
           icon: <ReactIcon className="w-8" />,
         },
         {
-          color: "bg-[#000000]",
-          icon: <NextIcon className="w-9" />,
-        },
-        {
           color: "bg-[#282C34]",
           icon: <AntDesignIcon className="w-8" />,
         },
