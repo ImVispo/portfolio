@@ -318,7 +318,7 @@ const ProjectCardBig = (props: ProjectBigProps) => (
     <div className="mt-3 flex space-x-2">
       {props.isPrivate ? (
         <div className="flex">
-          <LockIcon className="w-4 stroke-white/50 mr-1" />
+          <LockIcon className="w-4 h-4 stroke-white/50 mr-1" />
           <p className="text-sm text-white/50">Private Project</p>
         </div>
       ) : null}
@@ -329,7 +329,7 @@ const ProjectCardBig = (props: ProjectBigProps) => (
         <p className="text-sm text-blue-400 underline mr-1">
           View Project {!props.isPrivate ? "on Github" : null}
         </p>
-        <ExternalLink className="w-4 stroke-blue-400" />
+        <ExternalLink className="w-4 h-4 stroke-blue-400" />
       </div>
     </div>
     {/* Technologies */}
