@@ -184,11 +184,11 @@ const Projects = () => {
       images: ["/images/totemfall-1.png"],
       technologies: [
         {
-          icon: <CSharpIcon className="w-6 md:w-8" />,
-        },
-        {
           color: "bg-[#fff]",
           icon: <UnityIcon className="w-6 md:w-8 mr-1" />,
+        },
+        {
+          icon: <CSharpIcon className="w-6 md:w-8" />,
         },
       ],
     },
@@ -243,6 +243,10 @@ const Projects = () => {
         {
           color: "bg-[#282C34]",
           icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#07B6D5]",
+          icon: <TailwindIcon className="w-6 md:w-8 fill-white" />,
         },
       ],
     },
