@@ -67,7 +67,7 @@ const Intro = (props: IntroProps) => {
         className="rounded-md"
         src="/images/me.jpg"
         alt="me"
-        data-tip="Hello! :D I made this site in 1 day. I hope you enjoy it!"
+        data-tip="Hello! I made this site in 1 day. I hope you enjoy it!"
         onMouseEnter={() => props.showTooltip(true)}
         onMouseLeave={() => {
           props.showTooltip(false);
@@ -495,7 +495,7 @@ const AboutMe = () => {
       ),
     },
     {
-      title: "Buisnesses",
+      title: "Businesses",
       children: (
         <p className="text-sm text-white/50">
           A few months after picking up programming, I began making discord
