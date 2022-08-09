@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
         </Routes>
         <div className="w-full px-5 md:px-10 py-5 border-b border-white/10 flex space-x-10">
           <p className="text-white/50">Nickholas Boboaca</p>
