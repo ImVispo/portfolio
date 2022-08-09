@@ -20,11 +20,13 @@ import {
   CSharpIcon,
   CIcon,
   CPlusPlusIcon,
+  JavaIcon,
   NodeJSIcon,
   PythonIcon,
   UnityIcon,
   ExternalLink,
   GitIcon,
+  ElectronIcon,
 } from "../components/Icons";
 import Technology from "../components/Technology";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -149,6 +151,25 @@ const Projects = () => {
       ],
     },
     {
+      name: "Social Media Monitors",
+      description:
+        "Web scrapers for Twitter posts and Instagram posts/stories. Realtime updates sent to customer discord webhooks.",
+      link: "https://gizmo.solutions/",
+      isPrivate: true,
+      images: [
+        "/images/socialMonitors-1.png",
+        "/images/socialMonitors-2.png",
+        "/images/socialMonitors-3.png",
+      ],
+      logo: "/images/flow-logo.jpg",
+      technologies: [
+        {
+          color: "bg-[#539E43]",
+          icon: <NodeJSIcon className="w-6 md:w-8 fill-[#fff]" />,
+        },
+      ],
+    },
+    {
       name: "Totemfall",
       description:
         "Top down survival game to try and survive against waves of enemies.",
@@ -161,6 +182,44 @@ const Projects = () => {
         {
           color: "bg-[#fff]",
           icon: <UnityIcon className="w-6 md:w-8 mr-1" />,
+        },
+      ],
+    },
+    {
+      name: "Electron Bot UI",
+      description: "Desktop App made with Electron for a sneaker bot.",
+      link: "https://github.com/ImVispo/Electron-Bot-UI",
+      images: [
+        "/images/ElectronBotUI-1.PNG",
+        "/images/ElectronBotUI-2.PNG",
+        "/images/ElectronBotUI-3.PNG",
+        "/images/ElectronBotUI-4.PNG",
+        "/images/ElectronBotUI-5.PNG",
+      ],
+      technologies: [
+        {
+          color: "bg-[#007acc]",
+          icon: <TypescriptIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#282C34]",
+          icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#2B2E3A]",
+          icon: <ElectronIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Java File Manager",
+      description: "Simple file manager/explorer using Java Swing.",
+      link: "https://github.com/ImVispo/Java-File-Manager",
+      images: ["/images/JavaFileManager.PNG"],
+      technologies: [
+        {
+          color: "bg-[#fff]",
+          icon: <JavaIcon className="w-6 md:w-8" />,
         },
       ],
     },
@@ -181,17 +240,6 @@ const Projects = () => {
       ],
     },
     {
-      name: "Semaphore and Message Passing",
-      description:
-        "To become familiar with concurrent processing in Unix/Linux using shared memory and with semaphores in POSIX-based operating systems.",
-      link: "https://github.com/ImVispo/Semaphores-and-Message-Passing",
-      technologies: [
-        {
-          icon: <CIcon className="w-6 md:w-8" />,
-        },
-      ],
-    },
-    {
       name: "Puffer",
       description:
         "Automated Twitch clip compiler. Running on YouTube channels for games such as League of Legends, Valorant and more.",
@@ -201,6 +249,27 @@ const Projects = () => {
         {
           color: "bg-[#F7DF1E]",
           icon: <JavascriptIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Mega War Card Game",
+      description: "War Card Game made in C++",
+      link: "https://github.com/ImVispo/Mega-War-Card-Game",
+      technologies: [
+        {
+          icon: <CPlusPlusIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Semaphore and Message Passing",
+      description:
+        "To become familiar with concurrent processing in Unix/Linux using shared memory and with semaphores in POSIX-based operating systems.",
+      link: "https://github.com/ImVispo/Semaphores-and-Message-Passing",
+      technologies: [
+        {
+          icon: <CIcon className="w-6 md:w-8" />,
         },
       ],
     },
@@ -271,10 +340,11 @@ const ProjectCardBig = (props: ProjectBigProps) => (
       ))}
     </div>
     {/* Images */}
+
     <Carousel showThumbs={false} className="mt-3">
       {props.images?.map((image, i) => (
-        <div key={i}>
-          <img className="rounded-md" src={image}></img>
+        <div key={i} className="flex">
+          <img className="w-full object-cover rounded-md" src={image}></img>
         </div>
       ))}
     </Carousel>
