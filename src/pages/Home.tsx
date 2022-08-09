@@ -167,6 +167,10 @@ const Projects = () => {
       logo: "/images/flow-logo.jpg",
       technologies: [
         {
+          color: "bg-[#F7DF1E]",
+          icon: <JavascriptIcon className="w-6 md:w-8" />,
+        },
+        {
           color: "bg-[#539E43]",
           icon: <NodeJSIcon className="w-6 md:w-8 fill-[#fff]" />,
         },
