@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# My portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live site: https://www.nickholas.dev/
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Made with Typescript and Tailwindcss.
 
 ## Available Scripts
 
