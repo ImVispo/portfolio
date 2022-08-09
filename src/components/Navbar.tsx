@@ -5,7 +5,6 @@ import { TerminalIcon, GithubIcon, LinkedInIcon } from "./Icons";
 
 const iconClassName = `hover:cursor-pointer duration-300`;
 const Navbar = () => {
-  const navigate = useNavigate();
   const { hash } = useLocation();
   const [playClick] = useSound("/sounds/click.mp3");
   useEffect(() => {
@@ -34,7 +33,7 @@ const Navbar = () => {
           {pages.map((page, i) => (
             <p
               key={i}
-              className="text-[#D9E6FF] font-semibold"
+              className="text-[#D9E6FF] font-semibold hidden md:block"
               onClick={() => window.location.replace(`${page.path}`)}
             >
               {page.name}

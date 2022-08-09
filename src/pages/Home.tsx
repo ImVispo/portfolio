@@ -106,7 +106,7 @@ const Projects = () => {
         "/images/vision-2.PNG",
         "/images/vision-3.PNG",
       ],
-      logo: "/images/vision-logo.PNG",
+      logo: "/images/vision-logo.png",
       technologies: [
         {
           color: "bg-[#007acc]",
@@ -177,7 +177,7 @@ const Projects = () => {
       description:
         "Top down survival game to try and survive against waves of enemies.",
       link: "https://github.com/ImVispo/Totemfall",
-      images: ["/images/totemfall-1.PNG"],
+      images: ["/images/totemfall-1.png"],
       technologies: [
         {
           icon: <CSharpIcon className="w-6 md:w-8" />,
@@ -218,7 +218,7 @@ const Projects = () => {
       name: "Java File Manager",
       description: "Simple file manager/explorer using Java Swing.",
       link: "https://github.com/ImVispo/Java-File-Manager",
-      images: ["/images/JavaFileManager.PNG"],
+      images: ["/images/JavaFileManager.png"],
       technologies: [
         {
           color: "bg-[#fff]",
@@ -247,7 +247,7 @@ const Projects = () => {
       description:
         "Automated Twitch clip compiler. Running on YouTube channels for games such as League of Legends, Valorant and more.",
       link: "https://github.com/lukebradaric/puffer-twitch",
-      logo: "/images/puffer-logo.PNG",
+      logo: "/images/puffer-logo.png",
       technologies: [
         {
           color: "bg-[#F7DF1E]",
