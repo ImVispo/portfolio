@@ -13,6 +13,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
+        <div className="w-full px-5 md:px-10 py-5 border-b border-white/10 flex space-x-10">
+          <p className="text-white/50">Nickholas Boboaca</p>
+          <p className="text-white/50">nickcboboaca@gmail.com</p>
+        </div>
       </Router>
     </div>
   );

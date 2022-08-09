@@ -6,11 +6,11 @@ import { TerminalIcon, GithubIcon, LinkedInIcon } from "./Icons";
 const iconClassName = `hover:cursor-pointer duration-300`;
 const Navbar = () => {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
+  const { hash } = useLocation();
   const [playClick] = useSound("/sounds/click.mp3");
   useEffect(() => {
     playClick();
-  }, [pathname]);
+  }, [hash]);
 
   const pages = [
     {
@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       name: "About Me",
-      path: "#aboutMe",
+      path: "#about",
     },
   ];
 
@@ -41,18 +41,6 @@ const Navbar = () => {
             </p>
           ))}
         </div>
-
-        {/* <TerminalIcon className={`stroke-[#D9E6FF] w-6 ${iconClassName}`} /> */}
-        {/* <div className="pt-10">
-          {pages.map((page) => (
-            <Page
-              name={page.name}
-              path={page.path}
-              active={pathname === page.path}
-              navigate={navigate}
-            />
-          ))}
-        </div> */}
         <MyLinks className="m-auto" />
       </div>
     </>

@@ -33,8 +33,8 @@ export const SiteIcon = (props: any) => (
     {...props}
   >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
     />
   </svg>
@@ -59,12 +59,12 @@ export const LockIcon = (props: any) => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
-    stroke-width="2"
+    strokeWidth="2"
     {...props}
   >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
     />
   </svg>
@@ -77,12 +77,12 @@ export const ClickIcon = (props: any) => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    stroke-width="2"
+    strokeWidth="2"
     {...props}
   >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
     />
   </svg>
@@ -204,8 +204,8 @@ export const PrismaIcon = (props: any) => (
   >
     <path
       d="M32.908 30.475L19.151 1.26a2.208 2.208 0 0 0-1.88-1.257 2.183 2.183 0 0 0-2.01 1.042L.34 25.212a2.26 2.26 0 0 0 .025 2.426L7.66 38.935a2.346 2.346 0 0 0 2.635.969l21.17-6.262a2.32 2.32 0 0 0 1.457-1.258 2.27 2.27 0 0 0-.013-1.91zm-3.08 1.253L11.864 37.04c-.548.163-1.074-.312-.96-.865l6.418-30.731c.12-.575.914-.666 1.165-.134l11.881 25.23a.858.858 0 0 1-.541 1.188z"
-      clip-rule="evenodd"
-      fill-rule="evenodd"
+      clipRule="evenodd"
+      fillRule="evenodd"
     />
   </svg>
 );
@@ -220,8 +220,8 @@ export const ChromeIcon = (props: any) => (
       y2="21.87"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#1e8e3e" />
-      <stop offset="1" stop-color="#34a853" />
+      <stop offset="0" stopColor="#1e8e3e" />
+      <stop offset="1" stopColor="#34a853" />
     </linearGradient>
     <linearGradient
       id="c"
@@ -231,8 +231,8 @@ export const ChromeIcon = (props: any) => (
       y2="25.13"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#fcc934" />
-      <stop offset="1" stop-color="#fbbc04" />
+      <stop offset="0" stopColor="#fcc934" />
+      <stop offset="1" stopColor="#fbbc04" />
     </linearGradient>
     <linearGradient
       id="a"
@@ -242,8 +242,8 @@ export const ChromeIcon = (props: any) => (
       y2="31.25"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#d93025" />
-      <stop offset="1" stop-color="#ea4335" />
+      <stop offset="0" stopColor="#d93025" />
+      <stop offset="1" stopColor="#ea4335" />
     </linearGradient>
     <path fill="url(#a)" d="M93.29 25a50 50 90 0 0-86.6 0l3 54z" />
     <path fill="url(#b)" d="M28.35 62.5 6.7 25A50 50 90 0 0 50 100l49-50z" />
@@ -289,8 +289,8 @@ export const AntDesignIcon = (props: any) => (
         y2="37.8635764%"
         id="linearGradient-1"
       >
-        <stop stop-color="#4285EB" offset="0%"></stop>
-        <stop stop-color="#2EC7FF" offset="100%"></stop>
+        <stop stopColor="#4285EB" offset="0%"></stop>
+        <stop stopColor="#2EC7FF" offset="100%"></stop>
       </linearGradient>
       <linearGradient
         x1="69.644116%"
@@ -299,9 +299,9 @@ export const AntDesignIcon = (props: any) => (
         y2="108.456714%"
         id="linearGradient-2"
       >
-        <stop stop-color="#29CDFF" offset="0%"></stop>
-        <stop stop-color="#148EFF" offset="37.8600687%"></stop>
-        <stop stop-color="#0A60FF" offset="100%"></stop>
+        <stop stopColor="#29CDFF" offset="0%"></stop>
+        <stop stopColor="#148EFF" offset="37.8600687%"></stop>
+        <stop stopColor="#0A60FF" offset="100%"></stop>
       </linearGradient>
       <linearGradient
         x1="69.6908165%"
@@ -310,9 +310,9 @@ export const AntDesignIcon = (props: any) => (
         y2="117.391248%"
         id="linearGradient-3"
       >
-        <stop stop-color="#FA816E" offset="0%"></stop>
-        <stop stop-color="#F74A5C" offset="41.472606%"></stop>
-        <stop stop-color="#F51D2C" offset="100%"></stop>
+        <stop stopColor="#FA816E" offset="0%"></stop>
+        <stop stopColor="#F74A5C" offset="41.472606%"></stop>
+        <stop stopColor="#F51D2C" offset="100%"></stop>
       </linearGradient>
       <linearGradient
         x1="68.1279872%"
@@ -321,22 +321,16 @@ export const AntDesignIcon = (props: any) => (
         y2="114.942679%"
         id="linearGradient-4"
       >
-        <stop stop-color="#FA8E7D" offset="0%"></stop>
-        <stop stop-color="#F74A5C" offset="51.2635191%"></stop>
-        <stop stop-color="#F51D2C" offset="100%"></stop>
+        <stop stopColor="#FA8E7D" offset="0%"></stop>
+        <stop stopColor="#F74A5C" offset="51.2635191%"></stop>
+        <stop stopColor="#F51D2C" offset="100%"></stop>
       </linearGradient>
     </defs>
-    <g
-      id="Page-1"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
-    >
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g id="logo" transform="translate(-20.000000, -20.000000)">
         <g id="Group-28-Copy-5" transform="translate(20.000000, 20.000000)">
           <g id="Group-27-Copy-3">
-            <g id="Group-25" fill-rule="nonzero">
+            <g id="Group-25" fillRule="nonzero">
               <g id="2">
                 <path
                   d="M91.5880863,4.17652823 L4.17996544,91.5127728 C-0.519240605,96.2081146 -0.519240605,103.791885 4.17996544,108.487227 L91.5880863,195.823472 C96.2872923,200.518814 103.877304,200.518814 108.57651,195.823472 L145.225487,159.204632 C149.433969,154.999611 149.433969,148.181924 145.225487,143.976903 C141.017005,139.771881 134.193707,139.771881 129.985225,143.976903 L102.20193,171.737352 C101.032305,172.906015 99.2571609,172.906015 98.0875359,171.737352 L28.285908,101.993122 C27.1162831,100.824459 27.1162831,99.050775 28.285908,97.8821118 L98.0875359,28.1378823 C99.2571609,26.9692191 101.032305,26.9692191 102.20193,28.1378823 L129.985225,55.8983314 C134.193707,60.1033528 141.017005,60.1033528 145.225487,55.8983314 C149.433969,51.69331 149.433969,44.8756232 145.225487,40.6706018 L108.58055,4.05574592 C103.862049,-0.537986846 96.2692618,-0.500797906 91.5880863,4.17652823 Z"
@@ -383,7 +377,7 @@ export const DiscordIcon = (props: any) => (
     <g>
       <path
         d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
-        fill-rule="nonzero"
+        fillRule="nonzero"
       ></path>
     </g>
   </svg>
@@ -395,12 +389,12 @@ export const TerminalIcon = (props: any) => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    stroke-width="2"
+    strokeWidth="2"
     {...props}
   >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
     />
   </svg>
@@ -445,30 +439,30 @@ export const CIcon = (props: any) => (
   >
     <path
       fill="#283593"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="m 17.903,0.28628166 c 0.679,-0.381 1.515,-0.381 2.193,0 C 23.451,2.1692817 33.547,7.8372817 36.903,9.7202817 37.582,10.100282 38,10.804282 38,11.566282 c 0,3.766 0,15.101 0,18.867 0,0.762 -0.418,1.466 -1.097,1.847 -3.355,1.883 -13.451,7.551 -16.807,9.434 -0.679,0.381 -1.515,0.381 -2.193,0 -3.355,-1.883 -13.451,-7.551 -16.807,-9.434 -0.678,-0.381 -1.096,-1.084 -1.096,-1.846 0,-3.766 0,-15.101 0,-18.867 0,-0.762 0.418,-1.466 1.097,-1.8470003 3.354,-1.883 13.452,-7.551 16.806,-9.43400004 z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
       id="path2"
     />
     <path
       fill="#5c6bc0"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="m 0.304,31.404282 c -0.266,-0.356 -0.304,-0.694 -0.304,-1.149 0,-3.744 0,-15.014 0,-18.759 0,-0.758 0.417,-1.458 1.094,-1.8360003 3.343,-1.872 13.405,-7.507 16.748,-9.38000004 0.677,-0.379 1.594,-0.371 2.271,0.008 3.343,1.87200004 13.371,7.45900004 16.714,9.33100004 0.27,0.152 0.476,0.335 0.66,0.5760003 z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
       id="path4"
     />
     <path
       fill="#ffffff"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="m 19,7.0002817 c 7.727,0 14,6.2730003 14,14.0000003 0,7.727 -6.273,14 -14,14 -7.727,0 -14,-6.273 -14,-14 0,-7.727 6.273,-14.0000003 14,-14.0000003 z m 0,7.0000003 c 3.863,0 7,3.136 7,7 0,3.863 -3.137,7 -7,7 -3.863,0 -7,-3.137 -7,-7 0,-3.864 3.136,-7 7,-7 z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
       id="path6"
     />
     <path
       fill="#3949ab"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="m 37.485,10.205282 c 0.516,0.483 0.506,1.211 0.506,1.784 0,3.795 -0.032,14.589 0.009,18.384 0.004,0.396 -0.127,0.813 -0.323,1.127 l -19.084,-10.5 z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
       id="path8"
     />
   </svg>
@@ -483,7 +477,7 @@ export const CPlusPlusIcon = (props: any) => (
     width="306px"
     height="344.35px"
     viewBox="0 0 306 344.35"
-    enable-background="new 0 0 306 344.35"
+    enableBackground="new 0 0 306 344.35"
     {...props}
   >
     <path
@@ -595,8 +589,8 @@ export const PythonIcon = (props: any) => (
         y2="78.2008538%"
         id="linearGradient-1"
       >
-        <stop stop-color="#387EB8" offset="0%"></stop>
-        <stop stop-color="#366994" offset="100%"></stop>
+        <stop stopColor="#387EB8" offset="0%"></stop>
+        <stop stopColor="#366994" offset="100%"></stop>
       </linearGradient>
       <linearGradient
         x1="19.127525%"
@@ -605,8 +599,8 @@ export const PythonIcon = (props: any) => (
         y2="88.4290372%"
         id="linearGradient-2"
       >
-        <stop stop-color="#FFE052" offset="0%"></stop>
-        <stop stop-color="#FFC331" offset="100%"></stop>
+        <stop stopColor="#FFE052" offset="0%"></stop>
+        <stop stopColor="#FFC331" offset="100%"></stop>
       </linearGradient>
     </defs>
     <g>
@@ -631,7 +625,7 @@ export const UnityIcon = (props: any) => (
     x="0px"
     y="0px"
     viewBox="0 0 512 512"
-    // style="enable-background:new 0 0 512 512;"
+    // style="enableBackground:new 0 0 512 512;"
     // xml:space="preserve"
     {...props}
   >
@@ -671,7 +665,7 @@ export const GitIcon = (props: any) => (
     width="97px"
     height="97px"
     viewBox="0 0 97 97"
-    enable-background="new 0 0 97 97"
+    enableBackground="new 0 0 97 97"
     {...props}
   >
     <g>
@@ -695,12 +689,12 @@ export const ExternalLink = (props: any) => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    stroke-width="2"
+    strokeWidth="2"
     {...props}
   >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
     />
   </svg>

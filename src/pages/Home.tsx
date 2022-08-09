@@ -75,9 +75,12 @@ const Intro = (props: IntroProps) => {
         }}
       />
       <div className="mt-5 md:mt-0 md:ml-5">
-        <p className="text-4xl md:text-5xl font-semibold flex">
-          Nickholas <p className="text-[#FB441A] ml-2">Boboaca</p>
-        </p>
+        <div className="flex space-x-3">
+          <p className="text-4xl md:text-5xl font-semibold flex">Nickholas</p>
+          <p className="text-4xl md:text-5xl text-[#FB441A] font-semibold">
+            Boboaca
+          </p>
+        </div>
         <p className="text-[#667085] pt-2 max-w-4xl">
           Full stack developer passionate about creating scalable and efficient
           systems. I am highly motivated, team-oriented, and eager to learn new
@@ -541,7 +544,7 @@ const AboutMe = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]" id="aboutMe">
+    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]" id="about">
       <p className="text-3xl md:text-4xl font-bold">About Me</p>
       {/* <p className="text-[#667085] pt-2 max-w-4xl">
         I spend most of my free time playing games with friends, but as of
