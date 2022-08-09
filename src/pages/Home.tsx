@@ -67,7 +67,7 @@ const Intro = (props: IntroProps) => {
         className="rounded-md"
         src="/images/me.jpg"
         alt="me"
-        data-tip="Hello! :D"
+        data-tip="Hello! :D I made this site in 1 day. I hope you enjoy it!"
         onMouseEnter={() => props.showTooltip(true)}
         onMouseLeave={() => {
           props.showTooltip(false);
