@@ -67,7 +67,7 @@ const Intro = (props: IntroProps) => {
         className="rounded-md"
         src="/images/me.jpg"
         alt="me"
-        data-tip="Hello! I made this site in 1 day. I hope you enjoy it!"
+        data-tip="Hello! Welcome to my site. I hope you enjoy it!"
         onMouseEnter={() => props.showTooltip(true)}
         onMouseLeave={() => {
           props.showTooltip(false);
@@ -512,10 +512,9 @@ const AboutMe = () => {
           different products such as social media and retail web scrapers and a
           chrome extension that automates the purchasing of sneakers and
           streetwear. Towards the end of high school I made my own business
-          where others I sold memberships, reaching over 10,000 customers
-          worldwide. Recently, I've started to explore web3 and have taken up a
-          new project of my own, Vision, which builds tools that makes the NFT
-          space easier.
+          where I sold memberships, reaching over 10,000 customers worldwide.
+          Recently, I've started to explore web3 and have taken up a new project
+          of my own, Vision, which builds tools that makes the NFT space easier.
         </p>
       ),
     },
