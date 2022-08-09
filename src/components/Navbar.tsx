@@ -14,19 +14,35 @@ const Navbar = () => {
 
   const pages = [
     {
-      name: "About",
-      path: "/",
+      name: "Projects",
+      path: "#projects",
     },
     {
-      name: "Work",
-      path: "/projects",
+      name: "Technologies",
+      path: "#technologies",
+    },
+    {
+      name: "About Me",
+      path: "#aboutMe",
     },
   ];
 
   return (
     <>
-      <div className="w-full p-5 border-b border-white/10 flex justify-between">
-        <TerminalIcon className={`stroke-[#D9E6FF] w-6 ${iconClassName}`} />
+      <div className="w-full px-5 md:px-10 py-5 border-b border-white/10 flex justify-between">
+        <div className="flex space-x-5 md:space-x-10 hover:cursor-pointer">
+          {pages.map((page, i) => (
+            <p
+              key={i}
+              className="text-[#D9E6FF] font-semibold"
+              onClick={() => window.location.replace(`${page.path}`)}
+            >
+              {page.name}
+            </p>
+          ))}
+        </div>
+
+        {/* <TerminalIcon className={`stroke-[#D9E6FF] w-6 ${iconClassName}`} /> */}
         {/* <div className="pt-10">
           {pages.map((page) => (
             <Page
@@ -64,9 +80,15 @@ const Page = (props: PageProps) => {
 
 const MyLinks = ({ className }: { className: string }) => (
   <div className="flex space-x-5">
-    <GithubIcon className={`fill-gray-300 hover:fill-white ${iconClassName}`} />
+    <GithubIcon
+      className={`fill-gray-300 hover:fill-white ${iconClassName}`}
+      onClick={() => window.open("https://github.com/ImVispo")}
+    />
     <LinkedInIcon
       className={`fill-gray-300 hover:fill-white ${iconClassName}`}
+      onClick={() =>
+        window.open("https://www.linkedin.com/in/nickholas-boboaca-990231162/")
+      }
     />
   </div>
 );

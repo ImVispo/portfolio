@@ -275,7 +275,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]">
+    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]" id="projects">
       <p className="text-3xl md:text-4xl font-bold">Projects</p>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {projectsBig.map((project, i) => (
@@ -354,7 +354,7 @@ const ProjectCardBig = (props: ProjectBigProps) => (
 const Technologies = () => {
   console.log("Technologies");
   return (
-    <div className="px-5 md:px-10 py-6 md:py-10">
+    <div className="px-5 md:px-10 py-6 md:py-10" id="technologies">
       <p className="text-3xl md:text-4xl font-bold">Technologies</p>
       <p className="text-[#667085] pt-2 max-w-4xl">
         I use a wide variety of technologies to aid me in building efficient
@@ -541,7 +541,7 @@ const AboutMe = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]">
+    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]" id="aboutMe">
       <p className="text-3xl md:text-4xl font-bold">About Me</p>
       {/* <p className="text-[#667085] pt-2 max-w-4xl">
         I spend most of my free time playing games with friends, but as of
