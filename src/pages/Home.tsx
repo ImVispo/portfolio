@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import ReactTooltip from "react-tooltip";
 import {
@@ -49,6 +49,7 @@ const Home = () => {
       <Intro showTooltip={showTooltip} />
       <Projects />
       <Technologies />
+      <AboutMe />
     </div>
   );
 };
@@ -403,5 +404,99 @@ const OtherTechnologies = () => {
     </div>
   );
 };
+
+const AboutMe = () => {
+  console.log("AboutMe");
+  const sections = [
+    {
+      title: "Introduction",
+      children: (
+        <p className="text-sm text-white/50">
+          My passion for programming started in high school when I started
+          reselling sneakers as a hobby. Other resellers used programs to help
+          purchase sneakers that would sell out quickly. I ended up purchasing
+          one of these programs and after using it for a while, I tried to
+          create my own. It's been 4 years since then and my passion for
+          programming has only grown.
+        </p>
+      ),
+    },
+    {
+      title: "Buisnesses",
+      children: (
+        <p className="text-sm text-white/50">
+          A few months after picking up programming, I began making discord
+          bots, web scrapers, and other custom software that I would sell to
+          others in the reselling community. These services evolved into several
+          different products such as social media and retail web scrapers and a
+          chrome extension that automates the purchasing of sneakers and
+          streetwear. Towards the end of high school I made my own business
+          where others I sold memberships, reaching over 10,000 customers
+          worldwide. Recently, I've started to explore web3 and have taken up a
+          new project of my own, Vision, which builds tools that makes the NFT
+          space easier.
+        </p>
+      ),
+    },
+    {
+      title: "Games",
+      children: (
+        <p className="text-sm text-white/50">
+          I spend most of my free time playing games with friends, but as of
+          recent I've been learning game development. I've spent thousands of
+          countless hours playing games such as Valorant, League of Legends, and
+          Escape from Tarkov. My favorite game by far is World of Warcraft, and
+          with over 8000+ hours on it I'd say im pretty good at it. If you know
+          what logs are, you can check mine out{" "}
+          <a
+            className="text-blue-400 underline hover:cursor-pointer"
+            href="https://www.warcraftlogs.com/character/us/bleeding-hollow/vispo#zone=29&difficulty=4"
+          >
+            here
+          </a>
+          ; I have a few rank ones that I'm proud of.
+        </p>
+      ),
+    },
+    {
+      title: "Aspiration",
+      children: (
+        <p className="text-sm text-white/50">
+          I aspire to work on something impactful with a team of engineers that
+          I can learn from. My dream companies are Blizzard and Riot. It would
+          be a dream come true to be able to work on the games I grew up
+          playing.
+        </p>
+      ),
+    },
+  ];
+  return (
+    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]">
+      <p className="text-3xl md:text-4xl font-bold">About Me</p>
+      {/* <p className="text-[#667085] pt-2 max-w-4xl">
+        I spend most of my free time playing games with friends, but as of
+        recent, I've been learning game development.
+      </p> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        {sections.map((section, i) => (
+          <AboutMeSection key={i} title={section.title}>
+            {section.children}
+          </AboutMeSection>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+interface AboutMeSectionProps {
+  title: string;
+  children: React.ReactNode;
+}
+const AboutMeSection = (props: AboutMeSectionProps) => (
+  <div className="pt-3 md:pt-5">
+    <p className="text-lg md:text-xl font-semibold">{props.title}</p>
+    {props.children}
+  </div>
+);
 
 export default Home;
