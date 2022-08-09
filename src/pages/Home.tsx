@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
+import ReactTooltip from "react-tooltip";
 import {
   SiteIcon,
   TwitterIcon,
@@ -15,29 +16,61 @@ import {
   DiscordIcon,
   TailwindIcon,
   PostgresIcon,
+  PrismaIcon,
   CSharpIcon,
   CIcon,
+  CPlusPlusIcon,
+  NodeJSIcon,
+  PythonIcon,
   UnityIcon,
   ExternalLink,
+  GitIcon,
 } from "../components/Icons";
 import Technology from "../components/Technology";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
+type showTooltipFn = (arg0: boolean) => void;
 const Home = () => {
-  console.log("Home");
+  const [tooltip, updateToolTip] = useState(true);
+
+  const showTooltip = (show: boolean) => {
+    updateToolTip(show);
+  };
+
   return (
     <div className="font-inter text-white">
-      <Intro />
+      {tooltip && (
+        <ReactTooltip
+          effect="solid"
+          backgroundColor="#26272B"
+          multiline={true}
+        />
+      )}
+      <Intro showTooltip={showTooltip} />
       <Projects />
+      <Technologies />
     </div>
   );
 };
 
-const Intro = () => {
+interface IntroProps {
+  showTooltip: showTooltipFn;
+}
+const Intro = (props: IntroProps) => {
   console.log("Intro");
   return (
-    <div className="px-5 md:px-10 py-5 flex flex-col justify-center items-center md:flex-row md:py-20">
-      <img className="rounded-md" src="/images/me.jpg" alt="me" />
+    <div className="px-5 md:px-10 py-6 md:py-10 flex flex-col justify-center items-center md:flex-row md:py-20">
+      <img
+        className="rounded-md"
+        src="/images/me.jpg"
+        alt="me"
+        data-tip="Hello! :D"
+        onMouseEnter={() => props.showTooltip(true)}
+        onMouseLeave={() => {
+          props.showTooltip(false);
+          setTimeout(() => props.showTooltip(true), 100);
+        }}
+      />
       <div className="mt-5 md:mt-0 md:ml-5">
         <p className="text-4xl md:text-5xl font-semibold flex">
           Nickholas <p className="text-[#FB441A] ml-2">Boboaca</p>
@@ -71,7 +104,7 @@ const Projects = () => {
       technologies: [
         {
           color: "bg-[#007acc]",
-          icon: <TypescriptIcon />,
+          icon: <TypescriptIcon className="w-6 md:w-8" />,
         },
         {
           color: "bg-[#282C34]",
@@ -102,7 +135,7 @@ const Projects = () => {
       technologies: [
         {
           color: "bg-[#007acc]",
-          icon: <TypescriptIcon />,
+          icon: <TypescriptIcon className="w-6 md:w-8" />,
         },
         {
           color: "bg-[#282C34]",
@@ -138,7 +171,7 @@ const Projects = () => {
       technologies: [
         {
           color: "bg-[#007acc]",
-          icon: <TypescriptIcon />,
+          icon: <TypescriptIcon className="w-6 md:w-8" />,
         },
         {
           color: "bg-[#282C34]",
@@ -172,8 +205,8 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-10 py-5 bg-[#0C0C10]">
-      <p className="text-2xl md:text-3xl font-semibold">Projects</p>
+    <div className="px-5 md:px-10 py-6 md:py-10 bg-[#0C0C10]">
+      <p className="text-3xl md:text-4xl font-bold">Projects</p>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {projectsBig.map((project, i) => (
           <ProjectCardBig key={i} {...project} />
@@ -246,5 +279,129 @@ const ProjectCardBig = (props: ProjectBigProps) => (
     </Carousel>
   </div>
 );
+
+const Technologies = () => {
+  console.log("Technologies");
+  return (
+    <div className="px-5 md:px-10 py-6 md:py-10">
+      <p className="text-3xl md:text-4xl font-bold">Technologies</p>
+      <p className="text-[#667085] pt-2 max-w-4xl">
+        I use a wide variety of technologies to aid me in building efficient
+        software. I find learning new things enjoyable and it's what helps me
+        stay driven and motivated as a developer.
+      </p>
+      <FavoriteTechnologies />
+      <OtherTechnologies />
+    </div>
+  );
+};
+
+const FavoriteTechnologies = () => {
+  const favoriteTechnologies = [
+    {
+      name: "Typescript",
+      description: "My go-to language. Used for all of my full-stack projects.",
+      color: "bg-[#007acc]",
+      icon: <TypescriptIcon className="w-8 md:w-10" />,
+    },
+    {
+      name: "React",
+      description:
+        "2+ years of React experience. My go-to framework for building frontned.",
+      color: "bg-[#282C34]",
+      icon: <ReactIcon className="w-8 md:w-10" />,
+    },
+    {
+      name: "PostgreSQL",
+      description:
+        "Experience using postgres on several projects, including writing schemas from scratch.",
+      color: "bg-[#0277bd]",
+      icon: <PostgresIcon className="w-8 md:w-10" />,
+    },
+    {
+      name: "Unity",
+      description:
+        "Recently picked up Unity for game development this summer and I've been loving every minute of it.",
+      color: "bg-[#fff]",
+      icon: <UnityIcon className="w-8 md:w-10 mr-1" />,
+    },
+  ];
+  return (
+    <div className="pt-3 md:pt-5">
+      <p className="text-lg md:text-xl font-semibold">Favorite Technologies</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+        {favoriteTechnologies.map((technology, i) => (
+          <div key={i} className="flex space-x-3 items-center">
+            <Technology
+              className="w-12 h-12 md:w-14 md:h-14"
+              color={technology.color || ""}
+              icon={technology.icon}
+            />
+            <div className="flex flex-col justify-center">
+              <p className="text-lg font-bold">{technology.name}</p>
+              <p className="text-sm text-white/50">{technology.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const OtherTechnologies = () => {
+  const otherTechnologies = [
+    {
+      color: "bg-[#fff]",
+      icon: <PrismaIcon className="w-6 md:w-8 fill-[#000]" />,
+    },
+    {
+      color: "bg-[#023430]",
+      icon: <MongoIcon className="w-8 md:w-10" />,
+    },
+    {
+      color: "bg-[#000000]",
+      icon: <NextIcon className="w-8 md:w-10" />,
+    },
+    {
+      color: "bg-[#07B6D5]",
+      icon: <TailwindIcon className="w-8 md:w-10 fill-white" />,
+    },
+    {
+      color: "bg-[#539E43]",
+      icon: <NodeJSIcon className="w-8 md:w-10 fill-[#fff]" />,
+    },
+    {
+      color: "bg-[#667085]/[.05]",
+      icon: <CSharpIcon className="w-8 md:w-10" />,
+    },
+    {
+      color: "bg-[#667085]/[.05]",
+      icon: <CPlusPlusIcon className="w-8 md:w-10" />,
+    },
+    {
+      color: "bg-[#667085]/[.05]",
+      icon: <PythonIcon className="w-8 md:w-10" />,
+    },
+    {
+      color: "bg-[#667085]/[.05]",
+      icon: <GitIcon className="w-8 md:w-10" />,
+    },
+  ];
+  return (
+    <div className="pt-3 md:pt-5">
+      <p className="text-lg md:text-xl font-semibold">Other Technologies</p>
+      <div className="mt-3 grid grid-cols-6 sm:flex gap-4">
+        {otherTechnologies.map((technology, i) => (
+          <Technology
+            key={i}
+            className="w-12 h-12 md:w-14 md:h-14"
+            color={technology.color || ""}
+            icon={technology.icon}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Home;
