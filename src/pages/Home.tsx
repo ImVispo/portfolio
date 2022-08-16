@@ -389,7 +389,7 @@ const FavoriteTechnologies = () => {
     {
       name: "React",
       description:
-        "2+ years of React experience. My go-to framework for building frontned.",
+        "2+ years of React experience. My go-to framework for building frontend.",
       color: "bg-[#282C34]",
       icon: <ReactIcon className="w-8 md:w-10" />,
     },
