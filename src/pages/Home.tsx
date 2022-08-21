@@ -121,6 +121,10 @@ const Projects = () => {
           icon: <NextIcon className="w-6 md:w-8" />,
         },
         {
+          color: "bg-[#07B6D5]",
+          icon: <TailwindIcon className="w-6 md:w-8 fill-white" />,
+        },
+        {
           color: "bg-[#0277bd]",
           icon: <PostgresIcon className="w-6 md:w-8" />,
         },
@@ -145,6 +149,10 @@ const Projects = () => {
         {
           color: "bg-[#282C34]",
           icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#07B6D5]",
+          icon: <TailwindIcon className="w-6 md:w-8 fill-white" />,
         },
       ],
     },
