@@ -97,7 +97,7 @@ const Projects = () => {
   console.log("Projects");
   const projectsBig = [
     {
-      name: "Vision",
+      name: "Vision Rarity",
       description: "A platform for viewing NFT collection rarity rankings.",
       isPrivate: true,
       link: "https://rarity.visiontools.io/",
@@ -132,7 +132,7 @@ const Projects = () => {
     },
     {
       name: "Vision Landing Page",
-      description: "Landing page for my business, Vision.",
+      description: "Landing page for my NFT platform, Vision.",
       isPrivate: true,
       link: "https://visiontools.io/",
       images: [
