@@ -127,6 +127,28 @@ const Projects = () => {
       ],
     },
     {
+      name: "Vision Landing Page",
+      description: "Landing page for my business, Vision.",
+      isPrivate: true,
+      link: "https://visiontools.io/",
+      images: [
+        "/images/vision-landing-1.PNG",
+        "/images/vision-landing-2.PNG",
+        "/images/vision-landing-3.PNG",
+      ],
+      logo: "/images/vision-logo.png",
+      technologies: [
+        {
+          color: "bg-[#007acc]",
+          icon: <TypescriptIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#282C34]",
+          icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
       name: "Flow",
       description:
         "Chrome extension and web dashboard that aids in buying sneakers and streetwear.",
@@ -193,6 +215,28 @@ const Projects = () => {
       ],
     },
     {
+      name: "Portfolio Website",
+      description:
+        "This website you're looking at! My personal portfolio showcasing my projects and more about me.",
+      link: "https://github.com/ImVispo/portfolio",
+      images: ["/images/portfolio.png"],
+
+      technologies: [
+        {
+          color: "bg-[#007acc]",
+          icon: <TypescriptIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#282C34]",
+          icon: <ReactIcon className="w-6 md:w-8" />,
+        },
+        {
+          color: "bg-[#07B6D5]",
+          icon: <TailwindIcon className="w-6 md:w-8 fill-white" />,
+        },
+      ],
+    },
+    {
       name: "Electron Bot UI",
       description: "Desktop App made with Electron for a sneaker bot.",
       link: "https://github.com/ImVispo/Electron-Bot-UI",
@@ -231,30 +275,12 @@ const Projects = () => {
       ],
     },
     {
-      name: "Portfolio Website",
-      description:
-        "This website you're looking at! My personal portfolio showcasing my projects and more about me.",
-      link: "https://github.com/ImVispo/portfolio",
-      technologies: [
-        {
-          color: "bg-[#007acc]",
-          icon: <TypescriptIcon className="w-6 md:w-8" />,
-        },
-        {
-          color: "bg-[#282C34]",
-          icon: <ReactIcon className="w-6 md:w-8" />,
-        },
-        {
-          color: "bg-[#07B6D5]",
-          icon: <TailwindIcon className="w-6 md:w-8 fill-white" />,
-        },
-      ],
-    },
-    {
       name: "Puffer",
       description:
         "Automated Twitch clip compiler. Running on YouTube channels for games such as League of Legends, Valorant and more.",
       link: "https://github.com/lukebradaric/puffer-twitch",
+      images: ["/images/puffer.png"],
+
       logo: "/images/puffer-logo.png",
       technologies: [
         {
