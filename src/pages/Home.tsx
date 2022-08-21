@@ -219,7 +219,7 @@ const Projects = () => {
       description:
         "This website you're looking at! My personal portfolio showcasing my projects and more about me.",
       link: "https://github.com/ImVispo/portfolio",
-      images: ["/images/portfolio.png"],
+      images: ["/images/portfolio.PNG"],
 
       technologies: [
         {
@@ -279,7 +279,7 @@ const Projects = () => {
       description:
         "Automated Twitch clip compiler. Running on YouTube channels for games such as League of Legends, Valorant and more.",
       link: "https://github.com/lukebradaric/puffer-twitch",
-      images: ["/images/puffer.png"],
+      images: ["/images/puffer.PNG"],
 
       logo: "/images/puffer-logo.png",
       technologies: [
