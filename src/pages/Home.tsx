@@ -209,9 +209,25 @@ const Projects = () => {
     {
       name: "Totemfall",
       description:
-        "Top down survival game to try and survive against waves of enemies.",
+        "A top down survival game where you try and survive against waves of enemies.",
       link: "https://github.com/ImVispo/Totemfall",
       images: ["/images/totemfall-1.png"],
+      technologies: [
+        {
+          color: "bg-[#fff]",
+          icon: <UnityIcon className="w-6 md:w-8 mr-1" />,
+        },
+        {
+          icon: <CSharpIcon className="w-6 md:w-8" />,
+        },
+      ],
+    },
+    {
+      name: "Tiny Tools",
+      description:
+        "Contributed to an open source collection of easy to use Unity Tools.",
+      link: "https://github.com/lukebradaric/TinyTools",
+      images: ["/images/tinytools.png"],
       technologies: [
         {
           color: "bg-[#fff]",
